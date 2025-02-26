@@ -1,0 +1,49 @@
+.control-panel {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  input[type="radio"] {
+    display: none;
+
+    + label {
+      cursor: pointer;
+      padding: 8px 16px;
+      border-radius: 20px;
+      background-color: #f0f0f0;
+      color: #333;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #e0e0e0;
+      }
+    }
+
+    &:checked + label {
+      background-color: #007bff;
+      color: white;
+      box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+    }
+  }
+}
